@@ -6,6 +6,11 @@ namespace TemaEBS
     class Program
     {
         //====================
+        //Constants
+        //====================
+        public const int percentage = 100;
+
+        //====================
         //Global Variables
         //====================
         public static ArrayList fields = new ArrayList();
@@ -41,8 +46,10 @@ namespace TemaEBS
             //get number of the fields to be published
             for(int indexOfPercentages = 0; indexOfPercentages < percentages.Count; indexOfPercentages++)
             {
-                fieldsToBePublish.Add(publicationTotalNumber * percentages.IndexOf(indexOfPercentages) / 100);
+                fieldsToBePublish.Add(publicationTotalNumber * percentages.IndexOf(indexOfPercentages) / percentage);
             }
+
+            
         }
     }
 }
