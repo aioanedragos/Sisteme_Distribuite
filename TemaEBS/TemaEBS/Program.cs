@@ -153,6 +153,7 @@ namespace TemaEBS
 								if(numberOfOperator > 0)
                                 {
 									file.Write(fields[indexOfPublicationNumber].ToString() + "=" + (rand.Next(31) + 1).ToString() + "." + (rand.Next(12) + 1).ToString() + "." + (rand.Next(34) + 2000).ToString() + " ");
+									numberOfOperator--;
 								}
                                 else 
 								{
