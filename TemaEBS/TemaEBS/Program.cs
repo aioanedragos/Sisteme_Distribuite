@@ -20,13 +20,13 @@ namespace TemaEBS
 		public static populate writer = new populate();
 		public static date randomDate = new date();
 		public static int publicationTotalNumber;
-		public static string[] operators = { "<", ">", "=", "<=", ">=" };
+		public static string[] operators = { "<", ">", "<=", ">=" };
 		public static string[][] jaggedArray2 = new string[][]
 		{
 		new string[] { "Iasi", "Bucuresti", "Cluj", "Arad", "Timisoara", "Galati" },
 		new string[] { "N", "NE", "S", "SE", "W", "SW", "NW" }
 		};
-		static int number = 5;
+		static int number = 4;
 
 		//====================
 		//Functional Code
@@ -64,6 +64,12 @@ namespace TemaEBS
 					maxNumberOfPublish = publicationTotalNumber * percentages[indexOfPercentages] / percentage;
 				}
 			}
+
+			Console.WriteLine("Enter percentage of operator =:");
+			string percentageOperator = Console.ReadLine();
+
+			int numberOfOperator = (Int32.Parse(percentageOperator) * publicationTotalNumber) / percentage;
+
 			//write them
 			int indexId = 0;
 			using StreamWriter file = new StreamWriter("SubscriptionFile.txt");
@@ -91,21 +97,46 @@ namespace TemaEBS
 						case 2:
 							if (fieldsToBePublish[indexOfPublicationNumber] > 0)
 							{
-								file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + rand.Next(100).ToString() + " ");
+								if(numberOfOperator > 0)
+                                {
+									file.Write(fields[indexOfPublicationNumber].ToString() + "=" + rand.Next(100).ToString() + " ");
+									numberOfOperator--;
+								}
+                                else
+                                {
+									file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + rand.Next(100).ToString() + " ");
+
+								}
 							}
 							fieldsToBePublish[indexOfPublicationNumber]--;
 							break;
 						case 3:
 							if (fieldsToBePublish[indexOfPublicationNumber] > 0)
 							{
-								file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + rand.Next(100).ToString() + " ");
+								if(numberOfOperator > 0)
+                                {
+									file.Write(fields[indexOfPublicationNumber].ToString() + "=" + rand.Next(100).ToString() + " ");
+									numberOfOperator--;
+								}
+                                else
+                                {
+									file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + rand.Next(100).ToString() + " ");
+								}
 							}
 							fieldsToBePublish[indexOfPublicationNumber]--;
 							break;
 						case 4:
 							if (fieldsToBePublish[indexOfPublicationNumber] > 0)
 							{
-								file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + rand.Next(100).ToString() + " ");
+								if (numberOfOperator > 0)
+								{
+									file.Write(fields[indexOfPublicationNumber].ToString() + "=" + rand.Next(100).ToString() + " ");
+									numberOfOperator--;
+								}
+                                else
+                                {
+									file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + rand.Next(100).ToString() + " ");
+								}
 							}
 							fieldsToBePublish[indexOfPublicationNumber]--;
 							break;
@@ -119,7 +150,14 @@ namespace TemaEBS
 						default:
 							if (fieldsToBePublish[indexOfPublicationNumber] > 0)
 							{
-								file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + (rand.Next(31) + 1).ToString() + "." + (rand.Next(12) + 1).ToString() + "." + (rand.Next(34) + 2000).ToString() + " ");
+								if(numberOfOperator > 0)
+                                {
+									file.Write(fields[indexOfPublicationNumber].ToString() + "=" + (rand.Next(31) + 1).ToString() + "." + (rand.Next(12) + 1).ToString() + "." + (rand.Next(34) + 2000).ToString() + " ");
+								}
+                                else 
+								{
+									file.Write(fields[indexOfPublicationNumber].ToString() + operators[rand.Next(number)].ToString() + (rand.Next(31) + 1).ToString() + "." + (rand.Next(12) + 1).ToString() + "." + (rand.Next(34) + 2000).ToString() + " ");
+								}
 							}
 							fieldsToBePublish[indexOfPublicationNumber]--;
 							break;
