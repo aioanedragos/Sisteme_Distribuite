@@ -1,10 +1,10 @@
-stattionid=0 city=Iasi temp=14 rain=99 wind=85 direction=NE date=23.6.2003 
-stattionid=1 city=Iasi temp=17 rain=76 wind=90 direction=S date=25.12.2022 
-stattionid=2 city=Cluj temp=59 rain=48 wind=46 direction=NE date<27.1.2008 
-stattionid=3 city=Cluj temp<=94 rain<91 wind<82 direction=N date<27.8.2027 
-stattionid=4 city=Iasi temp>92 rain>9 wind<=38 direction=SE date<21.9.2006 
-stattionid=5 city=Bucuresti temp>=66 rain<=7 wind>=9 direction=NE date>=19.9.2005 
-stattionid=6 city=Cluj temp<10 rain>=93 wind<=33 direction=SE date>27.7.2010 
-stattionid=7 city=Cluj temp<21 rain>46 wind<15 direction=SE date>=24.8.2031 
-stattionid=8 city=Cluj temp<15 rain>75 wind>89 direction=NE date<=24.9.2002 
+stattionid=0 city=Arad temp=3 rain=4 wind=39 direction=NE date>=18.7.2024 
+stattionid=1 city=Cluj temp>17 rain<=7 wind<16 direction=NE date>=24.10.2003 
+stattionid=2 city=Bucuresti temp>65 rain>=66 wind<13 direction=S date>=28.6.2024 
+stattionid=3 city=Bucuresti temp<=45 rain>=32 wind>=15 direction=N date>13.5.2026 
+stattionid=4 city=Iasi temp<75 rain>87 wind>17 direction=S date<=12.8.2019 
+stattionid=5 city=Bucuresti temp>60 rain<=42 wind>=75 direction=S date<15.3.2014 
+stattionid=6 city=Cluj temp>11 rain>=59 wind<=80 direction=SE date<27.10.2015 
+stattionid=7 city=Bucuresti temp<=82 rain<=69 wind>=15 direction=N date<28.7.2030 
+stattionid=8 city=Iasi temp<=62 rain>63 wind<=76 direction=S date<11.9.2021 
 
